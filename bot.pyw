@@ -9,10 +9,10 @@ bot = commands.Bot(command_prefix = settings['prefix'])
 @bot.event
 async def on_ready():
      while True:
-          await bot.change_presence(status=discord.Status.online, activity=discord.Game("Создатель Koffi#1077"))
+          await bot.change_presence(status=discord.Status.online, activity=discord.Game("Создатель Koffi#1077 | ch?helpme"))
 @bot.command()
 async def photo(ctx):
-    randomPhotoDiscord = randint(1, 38)
+    randomPhotoDiscord = randint(1, 39)
     if randomPhotoDiscord == 1:
         embed = discord.Embed(color = 0xff9900, title = 'Random Photo. Contact: chdiscordbot@gmail.com ')
         embed.set_image(url='https://cdn.discordapp.com/attachments/832685123296034836/853299234685845534/Swiss_Male.webp')
@@ -191,7 +191,7 @@ async def wiki(ctx, arg1):
         await ctx.send(embed = embed)
 @bot.command()
 async def meme(ctx):
-    random__ = randint(1, 11)
+    random__ = randint(1, 13)
     if random__ == 1:
         embed = discord.Embed(color = 0xff9900, title = 'Random MEME. Contact: chdiscordbot@gmail.com ')
         embed.set_image(url='https://cdn.discordapp.com/attachments/849340636754739285/853640780711067648/f706f880be3bd8c6ae8730d387e07a7d.jpg')
@@ -236,6 +236,18 @@ async def meme(ctx):
         embed = discord.Embed(color = 0xff9900, title = 'Random MEME. Contact: chdiscordbot@gmail.com ')
         embed.set_image(url='https://cdn.discordapp.com/attachments/727586301410410528/853641956906369074/images.jpg')
         await ctx.send(embed = embed)   
- 
+    elif random__ == 12:
+        embed = discord.Embed(color = 0xff9900, title = 'Random MEME. Contact: chdiscordbot@gmail.com ')
+        embed.set_image(url='https://cdn.discordapp.com/attachments/827184889337872386/859100895319949312/belarus__countryhumans__by_dexelsarts_dedalu1-fullview.jpg')
+        await ctx.send(embed = embed)   
+    elif random__ == 13:
+        embed = discord.Embed(color = 0xff9900, title = 'Random MEME. Contact: chdiscordbot@gmail.com ')
+        embed.set_image(url='https://cdn.discordapp.com/attachments/827184889337872386/859097463641997382/4qzdyg.png')
+        await ctx.send(embed = embed)   
+@bot.command()
+async def helpme(ctx):
+    embed = discord.Embed(color = 0xff9900, title = 'Help. Contact: chdiscordbot@gmail.com ')
+    embed.description = "ch?meme - Random meme \n ch?photo - Random photo \n ch?wiki [country] - CountryHumans wiki \n ch?help - Help"
+    await ctx.send(embed = embed)   
 bot.run(settings['token'])
     
